@@ -17,4 +17,12 @@ export class MainPageComponent {
     name:'Picoro',
     power:1800
   }];
+
+  onNewCharacter(character: Character):void{
+    console.log('MainPage');
+    console.log(character);
+
+    this.characters.push(character);
+  }
+
 }
