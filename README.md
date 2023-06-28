@@ -1,4 +1,16 @@
-# Bases de Angular
+# BASES DE ANGULAR
+
+## Liberacion a produccion
+
+"build:href": "ng build --base-href ./",
+"delete:docs":"del docs",
+"copy:dist":"copyfiles dist/bases/* ./docs -f",
+"build:github": "npm run delete:docs && npm run build:href && npm run copy:dist"
+
+1.- Es Necesario ejecutar previamente:   npm install del-cli --save-dev && npm install copyfiles --save-dev
+
+
+       --------------------------------------------------------------------------------
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
 

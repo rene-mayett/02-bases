@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Character } from '../../interfaces/character.interface';
+import { v4 as uuid } from 'uuid';
 
 @Component({
   selector: 'dbz-add-character',
@@ -13,14 +14,16 @@ export class AddCharacterComponent {
 
   public character: Character = {
     name:'',
-    power:0
+    power:0,
+    id:''
   };
 
   emitCharacter():void {
-    console.log(this.character);
     if (this.character.name.length===0) return;
+    this.character.id=uuid();
+    console.log('AGREGANDO DESDE COMPONENTE: ',this.character)
     this.onNewCharacter.emit(this.character);
-    this.character={name:'',power:0}
+    this.character={name:'',power:0,id:''}
   }
 
 }
