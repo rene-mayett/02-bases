@@ -7,6 +7,7 @@ import { Character } from '../interfaces/character.interface';
 })
 
 export class MainPageComponent {
+
   public characters: Character [] = [{
     name:'Krilin',
     power:500
@@ -24,5 +25,12 @@ export class MainPageComponent {
 
     this.characters.push(character);
   }
+
+  onDeleteID(i:number){
+    console.log('MAIN PAGE AGAIN');
+    console.log(i);
+    this.characters.splice(i,1);
+  }
+
 
 }

@@ -23,7 +23,4 @@ export class AddCharacterComponent {
     this.character={name:'',power:0}
   }
 
-  onDeleteCharacter(i:number):void{
-    console.log(i);
-  }
 }
